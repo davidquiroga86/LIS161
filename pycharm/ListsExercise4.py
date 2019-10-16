@@ -11,5 +11,8 @@ while True:
         continue
     masterlist.append(number)
 
-print('Maximum:', max(masterlist))
-print('Minimum:', min(masterlist))
+if len(masterlist) == 0:
+    print('Empty, no maximum and minimum.')
+else:
+    print('Maximum:', max(masterlist))
+    print('Minimum:', min(masterlist))

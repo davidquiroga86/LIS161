@@ -1,8 +1,12 @@
-while True:
-    line = input('> ')
-    if line[0] == '#':
-        continue
-    if line == 'done':
-        break
-    print(line)
-print('Done!')
+counts = dict()
+print('Enter a line of text:')
+line = input('')
+
+words = line.split()
+
+print('Words:', words)
+
+print('Counting...')
+for word in words:
+    counts[word] = counts.get(word,0) + 1
+print('Counts', counts)

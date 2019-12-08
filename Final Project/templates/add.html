@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}PABL - Add{% endblock %}
+
+{% block content %}
+<div class = "container">
+    <form action="{{ url_for('add') }}" method="post">
+        <input type="hidden" value="{{ team }}" name="team">
+        Name:<input type="text" name="name" required><br>
+        FGM:<input type="number" name="fgm" required><br>
+        FGA:<input type="number" name="fga" required><br>
+        2PM:<input type="number" name="2pm" required><br>
+        2PA:<input type="number" name="2pa" required><br>
+        3PM:<input type="number" name="3pm" required><br>
+        3PA:<input type="number" name="3pa" required><br>
+        FTM:<input type="number" name="ftm" required><br>
+        FTA:<input type="number" name="fta" required><br>
+        ORB:<input type="number" name="orb" required><br>
+        DRB:<input type="number" name="drb" required><br>
+        TRB:<input type="number" name="trb" required><br>
+        AST:<input type="number" name="ast" required><br>
+        STL:<input type="number" name="stl" required><br>
+        BLK:<input type="number" name="blk" required><br>
+        TO:<input type="number" name="to" required><br>
+        PF:<input type="number" name="pf" required><br>
+        PTS:<input type="number" name="pts" required><br>
+
+        <button type="btn btn-primary"> Submit </button>
+    </form>
+</div>
+
+{% endblock %}

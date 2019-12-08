@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary navbar-fixed-top">
+  <a class="navbar-brand" href="{{  url_for('home') }}">PABL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Teams
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{{ url_for('team', name='19909395') }}">Batch 1990/93/95</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='1992') }}">Batch 1992</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='1994') }}">Batch 1994</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='1996') }}">Batch 1996</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='1997') }}">Batch 1997</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='1999') }}">Batch 1999</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='200018') }}">Batch 2000/18</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2002') }}">Batch 2002</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2003') }}">Batch 2003</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2004') }}">Batch 2004</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2005') }}">Batch 2005</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2006') }}">Batch 2006</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2007') }}">Batch 2007</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2008') }}">Batch 2008</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2009') }}">Batch 2009</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2010') }}">Batch 2010</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2012') }}">Batch 2012</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='201319') }}">Batch 2013/19</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2014') }}">Batch 2014</a>
+          <a class="dropdown-item" href="{{ url_for('team', name='2015') }}">Batch 2015</a>
+        </div>
+      </li>
+    </ul>
+    <div class="pull-right">
+    <ul class="nav navbar-nav navbar-right">
+      {% if username|length %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('logout') }}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+      {% else %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
+      </li>
+      {% endif %}
+    </ul>
+    </div>
+  </div>
+</nav>

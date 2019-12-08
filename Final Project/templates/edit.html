@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}PABL - Edit{% endblock %}
+
+{% block content %}
+<div class = "container">
+    <form action="{{ url_for('edit') }}" method="post">
+        <input type="hidden" value="{{ result[0] }}" name="id">
+        <input type="hidden" value="{{ result[2] }}" name="team">
+        Name:<input type="text" value="{{ result[1] }}" name="name"><br>
+        FGM:<input type="number" value="{{ result[3] }}" name="fgm"><br>
+        FGA:<input type="number" value="{{ result[4] }}" name="fga"><br>
+        2PM:<input type="number" value="{{ result[5] }}" name="2pm"><br>
+        2PA:<input type="number" value="{{ result[6] }}" name="2pa"><br>
+        3PM:<input type="number" value="{{ result[7] }}" name="3pm"><br>
+        3PA:<input type="number" value="{{ result[8] }}" name="3pa"><br>
+        FTM:<input type="number" value="{{ result[9] }}" name="ftm"><br>
+        FTA:<input type="number" value="{{ result[10] }}" name="fta"><br>
+        ORB:<input type="number" value="{{ result[11] }}" name="orb"><br>
+        DRB:<input type="number" value="{{ result[12] }}" name="drb"><br>
+        TRB:<input type="number" value="{{ result[13] }}" name="trb"><br>
+        AST:<input type="number" value="{{ result[14] }}" name="ast"><br>
+        STL:<input type="number" value="{{ result[15] }}" name="stl"><br>
+        BLK:<input type="number" value="{{ result[16] }}" name="blk"><br>
+        TO:<input type="number" value="{{ result[17] }}" name="to"><br>
+        PF:<input type="number" value="{{ result[18] }}" name="pf"><br>
+        PTS:<input type="number" value="{{ result[19] }}" name="pts"><br>
+
+        <button name="edit" value="update" class="btn btn-primary"> Submit </button>
+        <button name="edit" value="delete" class="btn btn-danger"> Delete </button>
+    </form>
+</div>
+
+{% endblock %}

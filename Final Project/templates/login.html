@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}PABL - Login{% endblock %}
+
+{% block content %}
+{% if status %}
+<h1> Wrong username/password try again</h1>
+{% endif %}
+
+<form action="{{ url_for('home') }}" method="post">
+    Name:<input type="text" name="username"><br>
+    Password:<input type="password" name="password"><br>
+    <button class="btn btn-primary"> Submit </button>
+</form>
+{% endblock %}
